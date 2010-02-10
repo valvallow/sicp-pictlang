@@ -68,7 +68,6 @@
           ((frame-coord-map frame) (end-segment segment))))
        segment-list))))
 
-; segmentsを合体させる
 (define append-segments
   (lambda segments
     (apply append segments)))
@@ -266,9 +265,6 @@
       (lambda (x)
         (f (g x))))))
 
-; 実際はフレームを変形させている
-; transform-relative-frameとか
-; 与えられた3点を用いてframeに相対的な変換を行なう
 (define transform-painter
   (lambda (painter origin corner1 corner2)
     (lambda (frame)
@@ -280,7 +276,6 @@
                        (sub-vect (m corner2) new-origin))))))))
 
 ; add
-; 複数のペインタを一つのフレームに描画する
 (define superpose
   (lambda painters
     (lambda (frame)
@@ -289,7 +284,6 @@
                 painters))))
 
 ; add
-; 指定した回数ペインタを連結する
 (define coupling
   (lambda (combinator)
     (lambda (painter1 n)
