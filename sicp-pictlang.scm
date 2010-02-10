@@ -1,4 +1,4 @@
-;;; sicp - picture language
+;; sicp - picture language
 
 ;;; drawers
 
@@ -57,7 +57,6 @@
 
 (define end-segment cdr)
 
-; segments‚ÌÀ•W‚ğframe‚É‘Î‚·‚é‘Š‘Î’l‚É•ÏŠ·
 (define segments->painter
   (lambda (segment-list)
     (lambda (frame)
